@@ -1,0 +1,38 @@
+﻿@model List<ThePerfumeShop.Models.HoaDon>
+
+@{
+    ViewData["Title"] = "Danh sách hóa đơn";
+}
+<div class="card">
+    <div class="card-header">
+        <strong class="card-title">Danh sách hóa đơn</strong>
+    </div>
+    <div class="card-body">
+        @if (Model != null)
+        {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Họ tên</th>
+                </tr>
+            </thead>
+            <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.MaHd</td>
+                            <td>@item.Thoigian</td>
+                        </tr>
+                    }
+            </tbody>
+            </table>
+        }
+        else
+        {
+            <h4>Chưa có bản ghi nào</h4>
+        }
+    </div>
+</div>
+
+

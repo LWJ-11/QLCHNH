@@ -1,0 +1,44 @@
+﻿@model List<ThePerfumeShop.Models.SanPham>
+
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+}
+<div class="card">
+    <div class="card-header">
+        <strong class="card-title">Danh sách sản phẩm</strong>
+    </div>
+    <div class="card-body">
+        @if (Model != null)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Nhà cung cấp</th>
+                        <th>Hãng sản phẩm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.MaSp</td>
+                            <td>@item.TenSp</td>
+                            <td>@item.Gia</td>
+                            <td>@item.MaNcc</td>
+                            <td>@item.MaBr</td>
+                        </tr>
+                    }
+            </tbody>
+        </table>
+        }
+        else
+        {
+                <h4>Chưa có bản ghi nào</h4>
+        }
+    </div>
+</div>
+
+
