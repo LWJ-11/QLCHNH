@@ -1,4 +1,4 @@
-﻿@model List<ThePerfumeShop.Models.SanPham>
+﻿@model List<ThePerfumeShop.Models.DataView.DanhSachSanPham>
 
 @{
     ViewData["Title"] = "Danh sách sản phẩm";
@@ -16,8 +16,8 @@
                         <th>Id</th>
                         <th>Tên sản phẩm</th>
                         <th>Giá</th>
-                        <th>Nhà cung cấp</th>
                         <th>Hãng sản phẩm</th>
+                        <th>Nhà cung cấp</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,8 +27,8 @@
                             <td>@item.MaSp</td>
                             <td>@item.TenSp</td>
                             <td>@item.Gia</td>
-                            <td>@item.MaNcc</td>
-                            <td>@item.MaBr</td>
+                            <td>@item.TenBr</td>
+                            <td>@item.TenNcc</td>
                         </tr>
                     }
             </tbody>

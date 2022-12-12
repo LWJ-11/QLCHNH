@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using ThePerfumeShop.Models.DataView;
 
 namespace ThePerfumeShop.Models;
 
@@ -43,12 +44,42 @@ public partial class QlchnhContext : DbContext
 
     public virtual DbSet<TonKho> TonKhos { get; set; }
 
+    //*************************************************************
+    //DataView
+
+    public DbSet<DanhSachKho> DanhSachKho { get; set; }
+    public DbSet<DanhSachSanPham> DanhSachSanPham { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=LK-21072022;Database=QLCHNH;Trusted_Connection=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-ETCHBCG;Database=QLCHNH;Trusted_Connection=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        //DataView
+        modelBuilder.Entity<DanhSachKho>(
+            eb =>
+            {
+                eb.HasNoKey();
+                eb.ToView("View_DanhSachKho");
+                eb.Property(v => v.MaKho).HasColumnName("ma_Kho");
+                eb.Property(v => v.Diachi).HasColumnName("diaChi");
+                eb.Property(v => v.TenCh).HasColumnName("ten_CH");
+            });
+        modelBuilder.Entity<DanhSachSanPham>(
+            eb =>
+            {
+                eb.HasNoKey();
+                eb.ToView("View_DanhSachSanPham");
+                eb.Property(v => v.MaSp).HasColumnName("ma_SP");
+                eb.Property(v => v.TenSp).HasColumnName("ten_SP");
+                eb.Property(v => v.Gia).HasColumnName("gia");
+                eb.Property(v => v.Chitiet).HasColumnName("chitiet");
+                eb.Property(v => v.TenBr).HasColumnName("ten_Br");
+                eb.Property(v => v.TenNcc).HasColumnName("ten_NCC");
+            });
+
+        //**************************************************************
         modelBuilder.Entity<Brand>(entity =>
         {
             entity.HasKey(e => e.MaBr).HasName("PK__Brand__0FE67ACBFD6EC22A");

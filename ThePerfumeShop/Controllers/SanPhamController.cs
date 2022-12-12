@@ -9,7 +9,7 @@ namespace ThePerfumeShop.Controllers
         private QlchnhContext qlchnhContext = new QlchnhContext();
         public IActionResult Index()
         {
-            var q = qlchnhContext.SanPhams.FromSql($"exec sp_danhsachsanpham").ToList();
+            var q = qlchnhContext.DanhSachSanPham.FromSql($"exec sp_danhsachsanpham").ToList();
             return View(q);
         }
     }

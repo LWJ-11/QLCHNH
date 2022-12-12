@@ -1,4 +1,4 @@
-﻿@model List<ThePerfumeShop.Models.Kho>
+﻿@model List<ThePerfumeShop.Models.DataView.DanhSachKho>
 
 @{
     ViewData["Title"] = "Danh sách kho";
@@ -24,7 +24,7 @@
                         <tr>
                             <td>@item.MaKho</td>
                             <td>@item.Diachi</td>
-                            <td>@item.MaCh</td>
+                            <td>@item.TenCh</td>
                         </tr>
                     }
                 </tbody>

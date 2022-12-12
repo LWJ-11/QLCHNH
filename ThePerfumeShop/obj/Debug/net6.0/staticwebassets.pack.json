@@ -1,0 +1,233 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ThePerfumeShop.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ThePerfumeShop.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\cs-skin-elastic.css",
+      "PackagePath": "staticwebassets\\css\\cs-skin-elastic.css"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\lib\\chosen\\chosen-sprite.png",
+      "PackagePath": "staticwebassets\\css\\lib\\chosen\\chosen-sprite.png"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\lib\\chosen\\chosen-sprite@2x.png",
+      "PackagePath": "staticwebassets\\css\\lib\\chosen\\chosen-sprite@2x.png"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\lib\\chosen\\chosen.css",
+      "PackagePath": "staticwebassets\\css\\lib\\chosen\\chosen.css"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\lib\\chosen\\chosen.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\chosen\\chosen.min.css"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\lib\\datatable\\buttons.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\datatable\\buttons.bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\lib\\datatable\\buttons.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\datatable\\buttons.dataTables.min.css"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\lib\\datatable\\dataTables.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\datatable\\dataTables.bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\lib\\vector-map\\jqvmap.min.css",
+      "PackagePath": "staticwebassets\\css\\lib\\vector-map\\jqvmap.min.css"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\css\\style.css.map"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\fonts\\icomoon\\icomoon.eot",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon.eot"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\fonts\\icomoon\\icomoon.svg",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon.svg"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\fonts\\icomoon\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon.ttf"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\fonts\\icomoon\\icomoon.woff",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\icomoon.woff"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\fonts\\icomoon\\index.html",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\index.html"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\dashboard.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\init\\chartjs-init.js",
+      "PackagePath": "staticwebassets\\js\\init\\chartjs-init.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\init\\datatables-init.js",
+      "PackagePath": "staticwebassets\\js\\init\\datatables-init.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\init\\flot-chart-init.js",
+      "PackagePath": "staticwebassets\\js\\init\\flot-chart-init.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\init\\fullcalendar-init.js",
+      "PackagePath": "staticwebassets\\js\\init\\fullcalendar-init.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\init\\gmap-init.js",
+      "PackagePath": "staticwebassets\\js\\init\\gmap-init.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\init\\peitychart-init.js",
+      "PackagePath": "staticwebassets\\js\\init\\peitychart-init.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\init\\vector-init.js",
+      "PackagePath": "staticwebassets\\js\\init\\vector-init.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\init\\weather-init.js",
+      "PackagePath": "staticwebassets\\js\\init\\weather-init.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\chosen\\chosen.jquery.js",
+      "PackagePath": "staticwebassets\\js\\lib\\chosen\\chosen.jquery.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\chosen\\chosen.jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\chosen\\chosen.jquery.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\chosen\\chosen.proto.js",
+      "PackagePath": "staticwebassets\\js\\lib\\chosen\\chosen.proto.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\chosen\\chosen.proto.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\chosen\\chosen.proto.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\buttons.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\buttons.bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\buttons.colVis.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\buttons.colVis.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\buttons.flash.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\buttons.flash.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\buttons.html5.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\buttons.print.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\buttons.print.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\dataTables.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\dataTables.bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\dataTables.buttons.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\datatables.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\datatables.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\jquery-1.12.4.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\jquery-1.12.4.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\jszip.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\jszip.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\pdfmake.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\pdfmake.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\data-table\\vfs_fonts.js",
+      "PackagePath": "staticwebassets\\js\\lib\\data-table\\vfs_fonts.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\gmap\\gmapApi.js",
+      "PackagePath": "staticwebassets\\js\\lib\\gmap\\gmapApi.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\gmap\\gmaps.js",
+      "PackagePath": "staticwebassets\\js\\lib\\gmap\\gmaps.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\lib\\gmap\\gmaps.min.js",
+      "PackagePath": "staticwebassets\\js\\lib\\gmap\\gmaps.min.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\vmap.sampledata.js",
+      "PackagePath": "staticwebassets\\js\\vmap.sampledata.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\js\\widgets.js",
+      "PackagePath": "staticwebassets\\js\\widgets.js"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\scss\\style.css",
+      "PackagePath": "staticwebassets\\scss\\style.css"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\scss\\style.css.map",
+      "PackagePath": "staticwebassets\\scss\\style.css.map"
+    },
+    {
+      "Id": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\wwwroot\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\scss\\style.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ThePerfumeShop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ThePerfumeShop.props",
+      "PackagePath": "build\\ThePerfumeShop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ThePerfumeShop.props",
+      "PackagePath": "buildMultiTargeting\\ThePerfumeShop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ThePerfumeShop.props",
+      "PackagePath": "buildTransitive\\ThePerfumeShop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
