@@ -9,15 +9,14 @@ grant select, insert, delete, update to Admin
 -----Nhân viên
 create role NhanVien
 
-grant select, insert, delete, update on NhanVien to NhanVien
+grant select, update on NhanVien to NhanVien
 grant select, insert, delete, update on SanPham to NhanVien
-grant select, insert, delete, update on Brand to NhanVien
-grant select, insert, delete, update on NhaCungCap to NhanVien
 grant select, insert, delete, update on DoanhThu to NhanVien
 grant select, insert, delete, update on ChitietDT to NhanVien
 grant select, insert, delete, update on HoaDon to NhanVien
 grant select, insert, delete, update on ChitietHD to NhanVien
-
+grant select on Brand to NhanVien
+grant select on NhaCungCap to NhanVien
 
 ------proc tạo tài khoản
 
