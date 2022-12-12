@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ThePerfumeShop.Models;
 
@@ -11,6 +12,10 @@ namespace ThePerfumeShop.Controllers
         {
             var q = qlchnhContext.DanhSachKho.FromSql($"exec sp_danhsachkho").ToList();
             return View(q);
+        }
+        public IActionResult Create()
+        {
+            return View();
         }
     }
 }

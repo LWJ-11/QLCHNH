@@ -30,7 +30,7 @@ end
 create proc sp_danhsachsanpham
 as
 begin
-    select sp.*, br.ten_Br ,ncc.ten_NCC
+    select sp.ma_SP,ten_SP, sp.gia, sp.chitiet, br.ten_Br ,ncc.ten_NCC
     from SanPham sp, NhaCungCap ncc, Brand br
     where sp.ma_Br = br.ma_Br
     and sp.ma_NCC = ncc.ma_NCC

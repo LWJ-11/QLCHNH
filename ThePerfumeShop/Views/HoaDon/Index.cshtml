@@ -1,4 +1,4 @@
-﻿@model List<ThePerfumeShop.Models.HoaDon>
+﻿@model List<ThePerfumeShop.Models.DataView.DanhSachHoaDon>
 
 @{
     ViewData["Title"] = "Danh sách hóa đơn";
@@ -14,7 +14,9 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Họ tên</th>
+                    <th>Tên khách hàng</th>
+                    <th>Ngày đặt</th>
+                    <th>Tổng tiền</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,7 +24,9 @@
                     {
                         <tr>
                             <td>@item.MaHd</td>
-                            <td>@item.Thoigian</td>
+                            <td>@item.TenKh</td>
+                            <td>@String.Format("{0:MM/dd/yyyy}",item.Thoigian)</td>
+                            <td>@String.Format("{0:0,0}", item.Thanhtien) VND</td>
                         </tr>
                     }
             </tbody>
