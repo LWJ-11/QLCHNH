@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QoynqIvNQo0gFiQr2WmJ+oXeNV2A+9Kle/+0p+TFnNnt05oQj+T/ZMdJDjjnjijBV2EgEQr3/+zEK/okcFC1/g==",
+  "dgSpecHash": "bZm6DgKvLJHfs9tbH8+WwD+zUpZCVo3No8Ex/ztRJ3KWQejJrLJXElbHjiiUzYMGBIc6lLXFQiQfyyVVheSiiA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\CHQTCSDL\\PerfumeShop\\ThePerfumeShop\\ThePerfumeShop\\ThePerfumeShop.csproj",
+  "projectFilePath": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\ThePerfumeShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lequa\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\lequa\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

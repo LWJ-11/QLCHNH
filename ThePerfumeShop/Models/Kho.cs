@@ -9,8 +9,6 @@ public partial class Kho
 
     public string? Diachi { get; set; }
 
-    public int? Soluong { get; set; }
-
     public int MaCh { get; set; }
 
     public virtual CuaHang MaChNavigation { get; set; } = null!;

@@ -3562,11 +3562,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\CHQTCSDL\\PerfumeShop\\ThePerfumeShop\\ThePerfumeShop\\ThePerfumeShop.csproj",
+      "projectUniqueName": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\ThePerfumeShop.csproj",
       "projectName": "ThePerfumeShop",
-      "projectPath": "D:\\Projects\\CHQTCSDL\\PerfumeShop\\ThePerfumeShop\\ThePerfumeShop\\ThePerfumeShop.csproj",
+      "projectPath": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\ThePerfumeShop.csproj",
       "packagesPath": "C:\\Users\\lequa\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\CHQTCSDL\\PerfumeShop\\ThePerfumeShop\\ThePerfumeShop\\obj\\",
+      "outputPath": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lequa\\AppData\\Roaming\\NuGet\\NuGet.Config",

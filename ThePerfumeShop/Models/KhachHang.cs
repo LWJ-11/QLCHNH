@@ -17,9 +17,5 @@ public partial class KhachHang
 
     public string? Diachi { get; set; }
 
-    public int Id { get; set; }
-
     public virtual ICollection<ChiTietHd> ChiTietHds { get; } = new List<ChiTietHd>();
-
-    public virtual TaiKhoan IdNavigation { get; set; } = null!;
 }

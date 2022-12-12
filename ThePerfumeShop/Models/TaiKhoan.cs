@@ -11,9 +11,7 @@ public partial class TaiKhoan
 
     public string? Matkhau { get; set; }
 
-    public string? Roll { get; set; }
-
-    public virtual ICollection<KhachHang> KhachHangs { get; } = new List<KhachHang>();
+    public string? Role { get; set; }
 
     public virtual ICollection<NhanVien> NhanViens { get; } = new List<NhanVien>();
 

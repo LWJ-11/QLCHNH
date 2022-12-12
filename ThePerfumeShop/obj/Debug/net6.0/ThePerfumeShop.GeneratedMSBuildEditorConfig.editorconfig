@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ThePerfumeShop
 build_property.RootNamespace = ThePerfumeShop
-build_property.ProjectDir = D:\Projects\CHQTCSDL\PerfumeShop\ThePerfumeShop\ThePerfumeShop\
+build_property.ProjectDir = D:\GitHub\QLCHNH\ThePerfumeShop\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Projects\CHQTCSDL\PerfumeShop\ThePerfumeShop\ThePerfumeShop
+build_property.MSBuildProjectDirectory = D:\GitHub\QLCHNH\ThePerfumeShop
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/HoaDon/Index.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/HoaDon/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/Home/Index.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/Home/Privacy.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/KhachHang/Index.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/KhachHang/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/Kho/Index.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/Kho/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/NhaCungCap/Index.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/NhaCungCap/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ3VuZ0NhcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/NhanVien/Index.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/NhanVien/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/SanPham/Index.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/SanPham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/Shared/Error.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/Shared/_PartialSideBar.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/Shared/_PartialSideBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsU2lkZUJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/_ViewImports.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/_ViewStart.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/CHQTCSDL/PerfumeShop/ThePerfumeShop/ThePerfumeShop/Views/Shared/_Layout.cshtml]
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ty0h8ao1go

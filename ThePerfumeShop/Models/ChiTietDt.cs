@@ -9,8 +9,6 @@ public partial class ChiTietDt
 
     public int MaCh { get; set; }
 
-    public int MaHd { get; set; }
-
     public double? Chi { get; set; }
 
     public double? Thu { get; set; }
@@ -22,8 +20,6 @@ public partial class ChiTietDt
     public virtual CuaHang MaChNavigation { get; set; } = null!;
 
     public virtual DoanhThu MaDtNavigation { get; set; } = null!;
-
-    public virtual HoaDon MaHdNavigation { get; set; } = null!;
 
     public virtual NhanVien MaNvNavigation { get; set; } = null!;
 }

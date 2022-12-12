@@ -9,7 +9,5 @@ public partial class HoaDon
 
     public DateTime? Thoigian { get; set; }
 
-    public virtual ICollection<ChiTietDt> ChiTietDts { get; } = new List<ChiTietDt>();
-
     public virtual ICollection<ChiTietHd> ChiTietHds { get; } = new List<ChiTietHd>();
 }
