@@ -3557,7 +3557,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lequa\\.nuget\\packages\\": {}
+    "C:\\Users\\LKCD-KHA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -3565,11 +3565,11 @@
       "projectUniqueName": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\ThePerfumeShop.csproj",
       "projectName": "ThePerfumeShop",
       "projectPath": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\ThePerfumeShop.csproj",
-      "packagesPath": "C:\\Users\\lequa\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\LKCD-KHA\\.nuget\\packages\\",
       "outputPath": "D:\\GitHub\\QLCHNH\\ThePerfumeShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lequa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LKCD-KHA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3629,7 +3629,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

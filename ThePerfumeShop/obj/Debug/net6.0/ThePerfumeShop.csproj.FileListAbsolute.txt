@@ -158,11 +158,6 @@ D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\ThePerfumeShop.csproj.CoreCompi
 D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\ThePerfumeShop.MvcApplicationPartsAssemblyInfo.cache
 D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\ThePerfumeShop.RazorAssemblyInfo.cache
 D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\ThePerfumeShop.RazorAssemblyInfo.cs
-D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\staticwebassets\msbuild.ThePerfumeShop.Microsoft.AspNetCore.StaticWebAssets.props
-D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\staticwebassets\msbuild.build.ThePerfumeShop.props
-D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ThePerfumeShop.props
-D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ThePerfumeShop.props
-D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\staticwebassets.pack.json
 D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\staticwebassets.build.json
 D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\staticwebassets.development.json
 D:\GitHub\QLCHNH\ThePerfumeShop\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css

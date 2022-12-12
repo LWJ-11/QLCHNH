@@ -176,7 +176,7 @@ begin
 end
 
 --------sửa
-
+--- sửa nhân viên
 create proc sp_suanv
 @maNV int,
 @tenNV nvarchar(50),
@@ -195,6 +195,7 @@ begin
 	and @id = (SElect id from TaiKhoan)
 end
 
+---sửa khách hàng
 create proc sp_suakh
 @maKH int,
 @tenKH nvarchar(50),
@@ -209,6 +210,7 @@ begin
 	where @maKH=ma_KH
 end
 
+---sửa sản phẩm
 create proc sp_suasp
 @maSP int,
 @tenSP nvarchar(50),
@@ -225,6 +227,7 @@ begin
 	and @maBr=(select ma_Br from Brand)
 end
 
+---sửa ncc
 create proc sp_suancc
 @maNCC int, 
 @tenNCC nvarchar(50),
@@ -237,6 +240,7 @@ begin
 	where ma_NCC=@maNCC
 end
 
+---sửa kho
 create proc sp_suakho
 @makho int,
 @diachi nvarchar(50),
@@ -248,3 +252,5 @@ begin
 	where ma_Kho=@makho
 	and @maCH=(select ma_CH from CuaHang)
 end
+
+
