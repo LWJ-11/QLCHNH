@@ -14,3 +14,11 @@ as
 begin
 	delete from NhaCungCap where ma_NCC = @maNCC
 end
+
+--xóa brand
+create proc sp_xoabr
+@mabr int
+as 
+begin
+	delete from Brand where ma_Br = @mabr
+end
