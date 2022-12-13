@@ -26,6 +26,17 @@ begin
 	select * from NhaCungCap
 end
 
+create proc sp_nhacungcapById
+@maNcc int
+as
+begin
+	select * from NhaCungCap
+	where ma_NCC = @maNcc
+end
+
+exec sp_nhacungcapById 1
+
+
 --- Lấy danh sách sản phẩm
 create proc sp_danhsachsanpham
 as
@@ -35,6 +46,20 @@ begin
     where sp.ma_Br = br.ma_Br
     and sp.ma_NCC = ncc.ma_NCC
 end
+
+
+alter proc sp_danhsachhoadon
+as
+begin
+	select hd.ma_HD, kh.ten_KH, hd.thoigian, cthd.thanhtien
+	from HoaDon hd, ChiTietHD cthd, KhachHang kh, SanPham sp
+	where hd.ma_HD=cthd.ma_HD
+	and cthd.ma_SP = sp.ma_SP
+	and cthd.ma_KH = kh.ma_KH
+end
+
+exec sp_danhsachhoadon
+
 
 ------------------------------------------------
 --- Lấy thông tin sản phẩm
