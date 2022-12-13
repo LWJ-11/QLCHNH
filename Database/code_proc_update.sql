@@ -76,4 +76,29 @@ begin
 	and @maCH=(select ma_CH from CuaHang)
 end
 
+--sửa quản lý
+create proc sp_suaquanly
+@maQL int,
+@tenQl nvarchar(50),
+@ngaysinh datetime,
+@gioitinh nvarchar(3),
+@sdt int,
+@diachi nvarchar(100),
+@id int
+as begin
+	update QuanLy 
+	set ten_QL=@tenQl, ngaysinh=@ngaysinh, gioitinh=@ngaysinh, sdt=@sdt, diachi=@diachi, id=@id
+	where @maQL = ma_QL
+	and @id = (SElect id from TaiKhoan)
+end
 
+
+--sửa brand
+create proc sp_suabrand
+@mabr int,
+@tenbr nvarchar(50)
+as begin
+	update Brand
+	set ten_Br=@tenbr
+	where ma_Br=@mabr
+end
