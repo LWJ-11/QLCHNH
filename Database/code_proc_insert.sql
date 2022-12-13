@@ -47,3 +47,12 @@ begin
 	insert into NhaCungCap(ten_NCC,sdt,diachi)
 	values (@tenNCC,@sdt,@diachi)
 end
+
+--thêm brand 
+create proc sp_thembrand
+@tenBr nvarchar(50)
+as begin
+	insert into Brand(ten_Br) values (@tenBr)
+end
+
+--thêm hóa đơn
