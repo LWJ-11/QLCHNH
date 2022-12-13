@@ -28,5 +28,22 @@ namespace ThePerfumeShop.Controllers
             return View(model);
             
         }
+        public IActionResult Edit(int id)
+        {
+            var q = qlchnhContext.NhaCungCaps.FromSqlRaw("exec sp_nhacungcapById {0}", id).AsEnumerable();
+            return View(q);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit([Bind] NhaCungCap model)
+        {
+            if (ModelState.IsValid)
+            {
+                qlchnhContext.Database.ExecuteSqlRaw("sp_suancc @p0, @p1, @p2, @p3", parameters: new object[] { model.MaNcc, model.TenNcc, model.Sdt, model.Diachi }); ;
+                return RedirectToAction("Index");
+            }
+            return View(model);
+
+        }
     }
 }
