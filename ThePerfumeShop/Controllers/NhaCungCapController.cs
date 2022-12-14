@@ -102,8 +102,44 @@ namespace ThePerfumeShop.Controllers
                     return View(rModel);
                 }
             }
-            return View(model as IEnumerable<NhaCungCap>);
+            return View();
+        }
+        public IActionResult Delete(int id)
+        {
+            var q = qlchnhContext.NhaCungCaps.FromSqlRaw("exec sp_nhacungcapById {0}", id).AsEnumerable();
+            return View(q);
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete([Bind] NhaCungCap model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    qlchnhContext.Database.ExecuteSqlRaw("sp_xoancc @p0", model.MaNcc);
+                    return RedirectToAction("Index");
+                }
+            }
+            catch(Exception ex)
+            {
+                if (ex.GetBaseException().GetType() == typeof(SqlException))
+                {
+                    Int32 ErrorCode = ((SqlException)ex).Number;
+                    switch (ErrorCode)
+                    {
+                        case 547:   // Constraint check violation
+                            ModelState.AddModelError("Diachi", "Vui lòng gỡ sản phẩm của nhà cung cấp này trước khi xóa!");
+                            break;
+                        default:
+                            break;
+                    }
+                    IEnumerable<NhaCungCap> rModel = new[] { model };
+                    return View(rModel);
+                }
+            }
+            return View();
         }
     }
 }
