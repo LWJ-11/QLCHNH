@@ -84,3 +84,15 @@ begin
 	and cthd.ma_KH = kh.ma_KH
 end
 
+-- lấy quản lý
+create proc sp_danhsachquanly
+as begin
+	select * from QuanLy
+end
+
+-- lấy brand
+create proc sp_danhsachbrand
+as begin
+	select * from Brand
+end
+
