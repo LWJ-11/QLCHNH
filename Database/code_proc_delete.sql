@@ -6,6 +6,7 @@ create proc sp_xoanv
 as
 begin
 	delete from NhanVien where ma_NV = @maNV
+	delete from TaiKhoan where id = (select id from NhanVien where ma_NV=@maNV)
 end
 ----Phạm Huỳnh Duy Kha
 ---03/12/2022
