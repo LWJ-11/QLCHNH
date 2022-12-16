@@ -1,5 +1,6 @@
 ﻿--------trigger
-
+----Lê Quang Duy
+---01/12/2022
 --số lượng sản phẩm mua phải lớn hơn bằng 1
 create trigger trg_soluongsanpham
 on ChitietHD
@@ -14,6 +15,8 @@ as begin
 		return
 	end
 end
+----Lê Quang Duy
+---01/12/2022
 --Kiểm tra tuổi nhân viên đủ 18
 create trigger trg_tuoinvtren18
 on NhanVien
@@ -28,6 +31,8 @@ as begin
 		return
 	end
 end
+----Lê Quang Duy
+---01/12/2022
 --Kiểm tra tuổi quản lý đủ 18
 create trigger trg_tuoiqltren18
 on QuanLy
@@ -42,6 +47,8 @@ as begin
 		return
 	end
 end
+----Lê Quang Duy
+---01/12/2022
 --Kiểm tra tuổi khách hàng đủ 18
 create trigger trg_tuoikhtren18
 on KhachHang
@@ -56,6 +63,8 @@ as begin
 		return
 	end
 end
+----Lê Quang Duy
+---01/12/2022
 --kiểm tra số kí tự số điện thoại nhân viên
 create trigger trg_Sokitusdtnv
 on NhanVien
@@ -70,6 +79,8 @@ as begin
 		return
 	end
 end
+----Lê Quang Duy
+---01/12/2022
 --kiểm tra số kí tự số điện thoại quản lý
 create trigger trg_Sokitusdtql
 on QuanLy
@@ -84,6 +95,8 @@ as begin
 		return
 	end
 end
+----Lê Quang Duy
+---01/12/2022
 --kiểm tra số kí tự số điện thoại khách hàng
 create trigger trg_Sokitusdtkh
 on KhachHang
@@ -98,6 +111,8 @@ as begin
 		return
 	end
 end
+----Phạm Huỳnh Duy Kha
+---01/12/2022
 --kiểm tra số kí tự số điện thoại nhà cung cấp
 create trigger trg_Sokitusdtncc
 on NhaCungCap
@@ -112,6 +127,8 @@ as begin
 		return
 	end
 end
+----Phạm Huỳnh Duy Kha
+---01/12/2022
 --kiểm tra số kí tự số điện thoại cửa hàng
 create trigger trg_Sokitusdtch
 on CuaHang
@@ -126,6 +143,8 @@ as begin
 		return
 	end
 end
+----Phạm Huỳnh Duy Kha
+---01/12/2022
 --kiểm tra giá không được bé hơn 1000
 create trigger trg_giakhongbe1000
 on SanPham
@@ -140,6 +159,8 @@ as begin
 		return
 	end
 end
+----Phạm Huỳnh Duy Kha
+---01/12/2022
 --kiểm tra ngay tạo hóa đơn không được lớn hơn ngày hiện tại
 create trigger trg_ngaytaohd
 on HoaDon
@@ -154,6 +175,8 @@ as begin
 		return
 	end
 end
+----Phạm Huỳnh Duy Kha
+---01/12/2022
 --kiểm tra ngày thống kê doanh thu không được lớn hơn ngày hiện tại
 create trigger trg_ngaytaodt
 on DoanhThu
@@ -168,6 +191,8 @@ as begin
 		return
 	end
 end
+----Phạm Huỳnh Duy Kha
+---01/12/2022
 --kiểm tra mật khẩu tối thiểu 8 ký tự và tối đa 20 ký tự
 create trigger trg_kitumk
 on TaiKhoan
@@ -182,6 +207,8 @@ as begin
 		return
 	end
 end
+----Phạm Huỳnh Duy Kha
+---01/12/2022
 --kiểm tra số lượng tồn kho không được bé hơn 0
 create trigger trg_soluongtonkho
 on TonKho
@@ -196,6 +223,8 @@ as begin
 		return
 	end
 end
+----Phạm Huỳnh Duy Kha
+---01/12/2022
 --kiểm tra tên nhân viên phải có ít nhất 6 ký tự
 create trigger trg_sokitutennv
 on NhanVien
@@ -209,6 +238,8 @@ as begin
 		raiserror('Tên không được ít hơn 4 ký tự',16,1)
 	end
 end
+----Phạm Huỳnh Duy Kha
+---01/12/2022
 --kiểm tra tên quản lý phải có ít nhất 6 ký tự
 create trigger trg_sokitutenql
 on QuanLy
@@ -222,6 +253,8 @@ as begin
 		raiserror('Tên không được ít hơn 4 ký tự',16,1)
 	end
 end
+----Phạm Huỳnh Duy Kha
+---01/12/2022
 --kiểm tra tên khách hàng phải có ít nhất 6 ký tự
 create trigger trg_sokitutenkh
 on KhachHang
