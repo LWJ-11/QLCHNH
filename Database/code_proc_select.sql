@@ -1,9 +1,12 @@
 ﻿--- lấy danh sách nhân viên
-create proc sp_danhsachnhanvien
+alter proc sp_danhsachnhanvien
 as
 begin
-	select * from NhanVien
+	select nv.ma_NV, nv.ten_NV, nv.ngaysinh, nv.gioitinh, nv.sdt, nv.diachi, ch.ten_CH from NhanVien nv, CuaHang ch
+	where nv.ma_CH = ch.ma_CH
 end
+
+exec sp_danhsachnhanvien
 
 --- Lấy danh sách khách hàng
 create proc sp_danhsachkhachhang

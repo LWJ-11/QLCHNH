@@ -50,6 +50,7 @@ public partial class QlchnhContext : DbContext
     public DbSet<DanhSachKho> DanhSachKho { get; set; }
     public DbSet<DanhSachSanPham> DanhSachSanPham { get; set; }
     public DbSet<DanhSachHoaDon> DanhSachHoaDon { get; set; }
+    public DbSet<DanhSachNhanVien> DanhSachNhanVien { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -58,6 +59,19 @@ public partial class QlchnhContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         //DataView
+        modelBuilder.Entity<DanhSachNhanVien>(
+           eb =>
+           {
+               eb.HasNoKey();
+               eb.ToView("View_DanhSachNhanVien");
+               eb.Property(v => v.MaNv).HasColumnName("ma_HD");
+               eb.Property(v => v.TenNv).HasColumnName("ten_KH");
+               eb.Property(v => v.Ngaysinh).HasColumnName("thoigian");
+               eb.Property(v => v.Gioitinh).HasColumnName("thanhtien");
+               eb.Property(v => v.Sdt).HasColumnName("thanhtien");
+               eb.Property(v => v.Diachi).HasColumnName("thanhtien");
+               eb.Property(v => v.TenCh).HasColumnName("thanhtien");
+           });
         modelBuilder.Entity<DanhSachHoaDon>(
            eb =>
            {
