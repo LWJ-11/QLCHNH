@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\GitHub\QLCHNH\ThePerfumeShop
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/CuaHang/DanhSachNhanVien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VhSGFuZ1xEYW5oU2FjaE5oYW5WaWVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/QLCHNH/ThePerfumeShop/Views/CuaHang/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VhSGFuZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/GitHub/QLCHNH/ThePerfumeShop/Views/HoaDon/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -58,10 +66,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/GitHub/QLCHNH/ThePerfumeShop/Views/NhanVien/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/GitHub/QLCHNH/ThePerfumeShop/Views/NhanVien/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/GitHub/QLCHNH/ThePerfumeShop/Views/SanPham/Index.cshtml]

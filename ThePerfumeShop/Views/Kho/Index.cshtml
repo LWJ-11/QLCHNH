@@ -18,6 +18,7 @@
                         <th>Id</th>
                         <th>Địa chỉ</th>
                         <th>Cửa hàng</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,6 +28,10 @@
                             <td>@item.MaKho</td>
                             <td>@item.Diachi</td>
                             <td>@item.TenCh</td>
+                            <td>
+                                <a href="/nhacungcap/edit/@item.MaKho" class="btn btn-sm btn-info"><i class="fa fa-pen-to-square"></i></a>
+                                <a href="/nhacungcap/delete/@item.MaKho" class="btn btn-sm btn-danger btnDelete"><i class="fa fa-trash-can"></i></a>
+                            </td>
                         </tr>
                     }
                 </tbody>

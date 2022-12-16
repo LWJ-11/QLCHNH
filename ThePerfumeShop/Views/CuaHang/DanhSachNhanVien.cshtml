@@ -1,12 +1,12 @@
-﻿@model List<ThePerfumeShop.Models.NhanVien>
+﻿@model List<ThePerfumeShop.Models.DataView.DanhSachNhanVien>
 
 @{
-    ViewData["Title"] = "Danh sách nhân viên";
+    ViewData["Title"] = "Cửa hàng " + Model.FirstOrDefault().TenCh;
 }
 <div class="card">
     <div class="card-header">
-        <strong class="card-title">Danh sách nhân viên</strong>
-        <a type="button" href="/NhanVien/Create" class="card-title btn btn-info float-right">Thêm nhà cung cấp</a>
+        <strong class="card-title">Cửa hàng @Model.FirstOrDefault().TenCh</strong>
+        <a type="button" href="/NhanVien/Create/@Model.FirstOrDefault().MaCh" class="card-title btn btn-info float-right">Thêm nhân viên</a>
     </div>
     <div class="card-body">
         @if (Model != null)
@@ -25,9 +25,9 @@
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>@item.MaNv</td>
+                    {
+                        <tr>
+                            <td>@item.MaNv</td>
                             <td>@item.TenNv</td>
                             <td>@String.Format("{0:MM/dd/yyyy}",item.Ngaysinh)</td>
                             <td>@item.Gioitinh</td>
@@ -37,14 +37,14 @@
                                 <a href="/nhacungcap/edit/@item.MaNv" class="btn btn-sm btn-info"><i class="fa fa-pen-to-square"></i></a>
                                 <a href="/nhacungcap/delete/@item.MaNv" class="btn btn-sm btn-danger btnDelete"><i class="fa fa-trash-can"></i></a>
                             </td>
-                        </tr>    
+                        </tr>
                     }
-            </tbody>
-        </table>
+                </tbody>
+            </table>
         }
         else
         {
-            <h4>Chưa có bản ghi nào</h4>
+            <h4>Chưa có thông tin nhân viên nào </h4>
         }
     </div>
 </div>

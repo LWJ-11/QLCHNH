@@ -2,31 +2,29 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using ThePerfumeShop.Models;
+using ThePerfumeShop.Models.DataView;
 
 namespace ThePerfumeShop.Controllers
 {
     public class NhanVienController : Controller
     {
         private QlchnhContext qlchnhContext = new QlchnhContext();
-        public IActionResult Index()
+       
+        public IActionResult Create(int id)
         {
-            var q = qlchnhContext.NhanViens.FromSql($"exec sp_danhsachnhanvien").ToList();
-            return View(q);
-        }
-        public IActionResult Create()
-        {
+            ViewBag.MaCH = id;
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind] NhaCungCap model)
+        public IActionResult Create([Bind] ThemNhanVien model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    qlchnhContext.Database.ExecuteSqlRaw("sp_themncc @p0, @p1, @p2", parameters: new object[] { model.TenNcc, model.Sdt, model.Diachi });
-                    return RedirectToAction("Index");
+                    qlchnhContext.Database.ExecuteSqlRaw("sp_themnhanvien @p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7", parameters: new object[] { model.TenDN, model.Matkhau, model.TenNv, model.Ngaysinh, model.Gioitinh, model.Sdt, model.Diachi, model.MaCh });
+                    return RedirectToAction("DanhSachNhanVien","CuaHang");
                 }
             }
             catch (Exception ex)
@@ -42,19 +40,21 @@ namespace ThePerfumeShop.Controllers
                             else if (ex.Message.Contains("unique_sdt_ncc"))
                                 ModelState.AddModelError("Sdt", "Số điện thoại đã tồn tại");
                             break;
-                        //case 547:   // Constraint check violation
-                        //    ModelState.AddModelError("Sdt", "Số điện thoại đã tồn tại");
-                        //    break;
+                        case 15151:
+                            return RedirectToAction("DanhSachNhanVien", "CuaHang", new { id = model.MaCh });
+                            break;
                         //case 2601:  // Duplicated key row error
                         //    ModelState.AddModelError("DiaChi", "Constraint check violation");
                         //    break;
                         default:
                             break;
                     }
-                    return View(model);
+                    IEnumerable<ThemNhanVien> erModel = new[] { model };
+                    return View(erModel);
                 }
             }
-            return View(model);
+            IEnumerable<ThemNhanVien> rModel = new[] { model };
+            return View(rModel);
         }
         public IActionResult Edit(int id)
         {

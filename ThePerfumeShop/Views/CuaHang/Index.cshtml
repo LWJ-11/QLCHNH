@@ -1,0 +1,49 @@
+﻿@model List<ThePerfumeShop.Models.CuaHang>
+
+@{
+    ViewData["Title"] = "Danh sách cửa hàng";
+}
+<div class="card">
+    <div class="card-header">
+        <strong class="card-title">Danh sách cửa hàng</strong>
+        <a type="button" href="/CuaHang/Create" class="card-title btn btn-info float-right">Thêm cửa hàng</a>
+    </div>
+    <div class="card-body">
+        @if (Model != null)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tên cửa hàng</th>
+                        <th>Số điện thoại</th>
+                        <th>Địa chỉ</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.MaCh</td>
+                            <td>@item.TenCh</td>
+                            <td>@item.Sdt</td>
+                            <td>@item.Diachi</td>
+                            <td>
+                                <a href="/cuahang/danhsachnhanvien/@item.MaCh" class="btn btn-sm btn-info"><i class="fa fa-users"></i></a>
+                                <a href="/cuahang/edit/@item.MaCh" class="btn btn-sm btn-info"><i class="fa fa-pen-to-square"></i></a>
+                                <a href="/cuahang/delete/@item.MaCh" class="btn btn-sm btn-danger btnDelete"><i class="fa fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h4>Chưa có bản ghi nào</h4>
+        }
+    </div>
+</div>
+
+

@@ -6,6 +6,7 @@
 <div class="card">
     <div class="card-header">
         <strong class="card-title">Danh sách sản phẩm</strong>
+        <a type="button" href="/CuaHang/Create" class="card-title btn btn-info float-right">Thêm sản phẩm</a>
     </div>
     <div class="card-body">
         @if (Model != null)
@@ -18,6 +19,7 @@
                         <th>Giá</th>
                         <th>Hãng sản phẩm</th>
                         <th>Nhà cung cấp</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,9 +28,13 @@
                         <tr>
                             <td>@item.MaSp</td>
                             <td>@item.TenSp</td>
-                            <td>@item.Gia</td>
+                            <td>@String.Format("{0:0,0}", item.Gia) VND</td>
                             <td>@item.TenBr</td>
                             <td>@item.TenNcc</td>
+                            <td>
+                                <a href="/nhacungcap/edit/@item.MaSp" class="btn btn-sm btn-info"><i class="fa fa-pen-to-square"></i></a>
+                                <a href="/nhacungcap/delete/@item.MaSp" class="btn btn-sm btn-danger btnDelete"><i class="fa fa-trash-can"></i></a>
+                            </td>
                         </tr>
                     }
             </tbody>

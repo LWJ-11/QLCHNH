@@ -1,8 +1,11 @@
 ﻿namespace ThePerfumeShop.Models.DataView
 {
-    public class DanhSachNhanVien
+    public class ThemNhanVien
     {
-        public int MaNv { get; set; }
+
+        public string? TenDN { get; set; }
+
+        public string? Matkhau { get; set; }
 
         public string? TenNv { get; set; }
 
@@ -13,7 +16,8 @@
         public int? Sdt { get; set; }
 
         public string? Diachi { get; set; }
+
         public int MaCh { get; set; }
-        public string? TenCh { get; set; }
+
     }
 }

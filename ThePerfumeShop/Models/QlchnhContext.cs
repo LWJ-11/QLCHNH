@@ -51,6 +51,7 @@ public partial class QlchnhContext : DbContext
     public DbSet<DanhSachSanPham> DanhSachSanPham { get; set; }
     public DbSet<DanhSachHoaDon> DanhSachHoaDon { get; set; }
     public DbSet<DanhSachNhanVien> DanhSachNhanVien { get; set; }
+    public DbSet<ThemNhanVien> ThemNhanVien { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -59,18 +60,33 @@ public partial class QlchnhContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         //DataView
+        modelBuilder.Entity<ThemNhanVien>(
+            eb =>
+            {
+                eb.HasNoKey();
+                eb.ToView("View_ThemNhanVien");
+                eb.Property(v => v.TenDN).HasColumnName("taikhoan");
+                eb.Property(v => v.Matkhau).HasColumnName("matkhau");
+                eb.Property(v => v.TenNv).HasColumnName("ten_NV");
+                eb.Property(v => v.Ngaysinh).HasColumnName("ngaysinh");
+                eb.Property(v => v.Gioitinh).HasColumnName("gioitinh");
+                eb.Property(v => v.Sdt).HasColumnName("sdt");
+                eb.Property(v => v.Diachi).HasColumnName("diachi");
+                eb.Property(v => v.MaCh).HasColumnName("ma_CH");
+            });
         modelBuilder.Entity<DanhSachNhanVien>(
-           eb =>
+            eb =>
            {
                eb.HasNoKey();
                eb.ToView("View_DanhSachNhanVien");
-               eb.Property(v => v.MaNv).HasColumnName("ma_HD");
-               eb.Property(v => v.TenNv).HasColumnName("ten_KH");
-               eb.Property(v => v.Ngaysinh).HasColumnName("thoigian");
-               eb.Property(v => v.Gioitinh).HasColumnName("thanhtien");
-               eb.Property(v => v.Sdt).HasColumnName("thanhtien");
-               eb.Property(v => v.Diachi).HasColumnName("thanhtien");
-               eb.Property(v => v.TenCh).HasColumnName("thanhtien");
+               eb.Property(v => v.MaNv).HasColumnName("ma_NV");
+               eb.Property(v => v.TenNv).HasColumnName("ten_NV");
+               eb.Property(v => v.Ngaysinh).HasColumnName("ngaysinh");
+               eb.Property(v => v.Gioitinh).HasColumnName("gioitinh");
+               eb.Property(v => v.Sdt).HasColumnName("sdt");
+               eb.Property(v => v.Diachi).HasColumnName("diachi");
+               eb.Property(v => v.MaCh).HasColumnName("ma_CH");
+               eb.Property(v => v.TenCh).HasColumnName("ten_CH");
            });
         modelBuilder.Entity<DanhSachHoaDon>(
            eb =>

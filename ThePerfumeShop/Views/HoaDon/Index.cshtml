@@ -6,6 +6,7 @@
 <div class="card">
     <div class="card-header">
         <strong class="card-title">Danh sách hóa đơn</strong>
+        <a type="button" href="/hoadon/create" class="card-title btn btn-info float-right">Thêm hóa đơn</a>
     </div>
     <div class="card-body">
         @if (Model != null)
@@ -17,6 +18,7 @@
                     <th>Tên khách hàng</th>
                     <th>Ngày đặt</th>
                     <th>Tổng tiền</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +29,10 @@
                             <td>@item.TenKh</td>
                             <td>@String.Format("{0:MM/dd/yyyy}",item.Thoigian)</td>
                             <td>@String.Format("{0:0,0}", item.Thanhtien) VND</td>
+                            <td>
+                                <a href="/nhacungcap/edit/@item.MaHd" class="btn btn-sm btn-info"><i class="fa fa-pen-to-square"></i></a>
+                                <a href="/nhacungcap/delete/@item.MaHd" class="btn btn-sm btn-danger btnDelete"><i class="fa fa-trash-can"></i></a>
+                            </td>
                         </tr>
                     }
             </tbody>
