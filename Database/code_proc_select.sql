@@ -7,6 +7,14 @@ begin
 	and ch.ma_CH = @maCH
 end
 
+create proc sp_nhanvienbyId @maNV int
+as
+begin
+	select nv.ma_NV, nv.ten_NV, nv.ngaysinh, nv.gioitinh, nv.sdt, nv.diachi, ch.ma_CH, ch.ten_CH from NhanVien nv, TaiKhoan tk
+	where nv.ma_CH = @maCH
+	and ch.ma_CH = @maCH
+end
+
 exec sp_danhsachnhanvien 1
 
 exec sp_danhsachnhanvien
@@ -25,6 +33,13 @@ begin
 	select *  from CuaHang
 end
 
+create proc sp_cuahangbyId
+@maCH int
+as
+begin
+	select *  from CuaHang ch
+	where ma_CH = @maCH
+end
 
 --- Lấy danh sách Kho
 alter proc sp_danhsachkho
@@ -63,7 +78,11 @@ begin
     where sp.ma_Br = br.ma_Br
     and sp.ma_NCC = ncc.ma_NCC
 end
-
+create proc sp_danhsachbrand
+as
+begin
+	select * from Brand
+end
 
 alter proc sp_danhsachhoadon
 as

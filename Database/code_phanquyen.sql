@@ -28,7 +28,6 @@ grant select on NhaCungCap to NhanVien
 create proc sp_themnhanvien
 @tenDN nvarchar(50),
 @matkhau nvarchar(10),
-@confmatkhau nvarchar(10),
 @tenNV nvarchar(50),
 @ngaysinh datetime,
 @gioitinh nvarchar(3),
@@ -49,11 +48,6 @@ as begin
 		raiserror('Tài khoản đã tồn tại',16,1)
 		return
 	end
-	if(@matkhau != @confmatkhau)
-	begin
-		raiserror('Mật khẩu không khớp',16,1)
-		return
-	end
 	--tạo login
 	exec sp_addlogin @tenDN, @matkhau
 	--gán user cho login
@@ -70,7 +64,7 @@ as begin
 	values (@tenNV,@ngaysinh,@gioitinh,@sdt,@diachi,@maCH,@id)
 end
 
-exec sp_themnhanvien 'DuyKha3','123456','Duy Kha 1', '20221212','20221212', 'nam', 0987654341, 'TP HCM', 1
+exec sp_themnhanvien 'DuyKha6','123456','Duy Kha 6','20221212', 'nam', 087774341, 'TP HCM', 1
 
 ---quản lý
 create proc sp_themquanly

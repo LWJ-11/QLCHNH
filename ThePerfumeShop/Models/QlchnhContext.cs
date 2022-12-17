@@ -52,6 +52,7 @@ public partial class QlchnhContext : DbContext
     public DbSet<DanhSachHoaDon> DanhSachHoaDon { get; set; }
     public DbSet<DanhSachNhanVien> DanhSachNhanVien { get; set; }
     public DbSet<ThemNhanVien> ThemNhanVien { get; set; }
+    public DbSet<ThemSanPham> ThemSanPham { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -60,6 +61,17 @@ public partial class QlchnhContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         //DataView
+        modelBuilder.Entity<ThemSanPham>(
+           eb =>
+           {
+               eb.HasNoKey();
+               eb.ToView("View_ThemSanPham");
+               eb.Property(v => v.TenSp).HasColumnName("ten_SP");
+               eb.Property(v => v.Gia).HasColumnName("gia");
+               eb.Property(v => v.Chitiet).HasColumnName("chitiet");
+               eb.Property(v => v.MaBr).HasColumnName("ma_NCC");
+               eb.Property(v => v.MaNcc).HasColumnName("ma_Br");
+           });
         modelBuilder.Entity<ThemNhanVien>(
             eb =>
             {

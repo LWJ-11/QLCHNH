@@ -1,0 +1,38 @@
+﻿@model ThePerfumeShop.Models.DataView.ThemSanPham
+@{
+    ViewData["Title"] = "Thêm sản phẩm";
+}
+
+<div class="card">
+    <div class="card-header"><strong>Thêm sản phẩm</strong></div>
+    <div class="card-body card-block">
+        <form action="/sanpham/create" method="post" asp-antiforgery="true">
+            <div class="form-group">
+                <label for="TenSp" class=" form-control-label">Tên sản phẩm</label>
+                <input type="text" name="TenSp" class="form-control">
+                <span asp-validation-for="TenSp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Gia" class=" form-control-label">Số điện thoại</label>
+                <input type="text" name="Gia" class="form-control">
+                <span asp-validation-for="Gia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Chitiet" class=" form-control-label">Địa chỉ</label>
+                <input type="text" name="Chitiet" class="form-control">
+            </div>
+            <select asp-for="MaBr"
+                    asp-items="@ViewBag.Brand">
+                <option>Please select one</option>
+            </select>
+            <select asp-for="MaNcc"
+                    asp-items="@ViewBag.Ncc">
+                <option>Please select one</option>
+            </select>
+            <div class="form-group">
+                <a href="/sanpham" class="btn btn-outline-primary mt-4"><i class="fa fa-arrow-left"></i> &nbsp; Trở về</a>
+                <input type="submit" name="submit" class="btn btn-info mt-4" value="Thêm" />
+            </div>
+        </form>
+    </div>
+</div>
