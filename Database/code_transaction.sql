@@ -3,7 +3,7 @@
 ----- Lê Quang Duy
 ----01/12/2022
 --- tran sp xem thông tin hóa đơn
-create proc sp_thongtinhoadon @maHD int
+alter proc sp_thongtinhoadon @maHD int
 as
 begin
 	set xact_abort on
@@ -34,7 +34,7 @@ end
 ----Phạm Huỳnh Duy Kha
 ---01/12/2022
 --- tran sp thêm khách hàng
-create proc sp_themsanpham 
+alter proc sp_themsanpham 
 @tenSP nvarchar(50),
 @gia float,
 @chitiet nvarchar(500),
@@ -70,7 +70,7 @@ end
 ----Lê Quang Duy
 ---01/12/2022
 --- tran sp them hd
-create proc sp_themhd
+alter proc sp_themhd
 @thoigian datetime,
 @maSP int,
 @maKH int,
@@ -108,7 +108,7 @@ end
 -----Lê Quang Duy
 --02/12/2022
 --- sửa nhân viên
-create proc sp_suanv
+alter proc sp_suanv
 @maNV int,
 @tenNV nvarchar(50),
 @ngaysinh datetime,
@@ -152,7 +152,7 @@ end
 -----Phạm huỳnh Duy Kha
 --02/12/2022
 ---sửa khách hàng
-create proc sp_suakh
+alter proc sp_suakh
 @maKH int,
 @tenKH nvarchar(50),
 @ngaysinh datetime,
@@ -188,7 +188,7 @@ end
 -----Lê Quang Duy
 --02/12/2022
 ---sửa sản phẩm
-create proc sp_suasp
+alter proc sp_suasp
 @maSP int,
 @tenSP nvarchar(50),
 @gia float,
@@ -231,7 +231,7 @@ end
 -----Phạm Huỳnh Duy Kha
 --02/12/2022
 ---sửa ncc
-create proc sp_suancc
+alter proc sp_suancc
 @maNCC int, 
 @tenNCC nvarchar(50),
 @sdt int,
@@ -267,7 +267,7 @@ end
 -----Phạm Huỳnh DUy Kha
 --02/12/2022
 ---sửa kho
-create proc sp_suakho
+alter proc sp_suakho
 @makho int,
 @diachi nvarchar(50),
 @maCH int
@@ -301,7 +301,7 @@ end
 -----Lê Quang Duy
 --02/12/2022
 --sửa quản lý
-create proc sp_suaquanly
+alter proc sp_suaquanly
 @maQL int,
 @tenQl nvarchar(50),
 @ngaysinh datetime,
@@ -341,7 +341,7 @@ end
 -----Lê Quang Duy
 --02/12/2022
 --sửa brand
-create proc sp_suabrand
+alter proc sp_suabrand
 @mabr int,
 @tenbr nvarchar(50)
 as begin
@@ -371,7 +371,7 @@ end
 ----Phạm Huỳnh Duy Kha
 ---03/12/2022
 --xóa nhân viên
-create proc sp_xoanv
+alter proc sp_xoanv
 @maNV int
 as
 begin
@@ -400,7 +400,7 @@ end
 ----Lê Quang Duy
 ---03/12/2022
 --xóa nhà cung cấp
-create proc sp_xoancc
+alter proc sp_xoancc
 @maNCC int
 as 
 begin
@@ -427,7 +427,7 @@ end
 ----Phạm Huỳnh Duy Kha
 ---03/12/2022
 --xóa brand
-create proc sp_xoabr
+alter proc sp_xoabr
 @mabr int
 as 
 begin
