@@ -1,4 +1,5 @@
-﻿--------sửa
+﻿-----Lê Quang Duy
+--02/12/2022
 --- sửa nhân viên
 create proc sp_suanv
 @maNV int,
@@ -17,7 +18,8 @@ begin
 	and @maCH = (select ma_CH from CuaHang)
 	and @id = (SElect id from TaiKhoan)
 end
-
+-----Phạm huỳnh Duy Kha
+--02/12/2022
 ---sửa khách hàng
 create proc sp_suakh
 @maKH int,
@@ -32,7 +34,8 @@ begin
 	set ten_KH=@tenKH,ngaysinh=@ngaysinh,gioitinh=@gioitinh,sdt=@sdt,diachi=@diachi
 	where @maKH=ma_KH
 end
-
+-----Lê Quang Duy
+--02/12/2022
 ---sửa sản phẩm
 create proc sp_suasp
 @maSP int,
@@ -49,7 +52,8 @@ begin
 	and @maNCC=(select ma_NCC from NhaCungCap)
 	and @maBr=(select ma_Br from Brand)
 end
-
+-----Phạm Huỳnh Duy Kha
+--02/12/2022
 ---sửa ncc
 create proc sp_suancc
 @maNCC int, 
@@ -62,7 +66,8 @@ begin
 	set ten_NCC=@tenNCC,sdt=@sdt,diachi=@diachi
 	where ma_NCC=@maNCC
 end
-
+-----Phạm Huỳnh DUy Kha
+--02/12/2022
 ---sửa kho
 create proc sp_suakho
 @makho int,
@@ -75,7 +80,8 @@ begin
 	where ma_Kho=@makho
 	and @maCH=(select ma_CH from CuaHang)
 end
-
+-----Lê Quang Duy
+--02/12/2022
 --sửa quản lý
 create proc sp_suaquanly
 @maQL int,
@@ -91,8 +97,8 @@ as begin
 	where @maQL = ma_QL
 	and @id = (SElect id from TaiKhoan)
 end
-
-
+-----Lê Quang Duy
+--02/12/2022
 --sửa brand
 create proc sp_suabrand
 @mabr int,

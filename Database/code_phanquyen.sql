@@ -64,7 +64,7 @@ as begin
 	values (@tenNV,@ngaysinh,@gioitinh,@sdt,@diachi,@maCH,@id)
 end
 
-exec sp_themnhanvien 'DuyKha6','123456','Duy Kha 6','20221212', 'nam', 087774341, 'TP HCM', 1
+exec sp_themnhanvien 'DuyKha','123456','Duy Kha', '20221212', 'nam', 0987654321, 'TP HCM', 1
 
 ---quản lý
 create proc sp_themquanly
