@@ -6,7 +6,7 @@
 <div class="card">
     <div class="card-header">
         <strong class="card-title">Danh sách khách hàng</strong>
-        <a type="button" href="/CuaHang/Create" class="card-title btn btn-info float-right">Thêm khách hàng</a>
+        <a type="button" href="/khachhang/create" class="card-title btn btn-info float-right">Thêm khách hàng</a>
     </div>
     <div class="card-body">
         @if (Model != null)
@@ -34,8 +34,7 @@
                             <td>@item.Sdt</td>
                             <td>@item.Diachi</td>
                             <td>
-                                <a href="/nhacungcap/edit/@item.MaKh" class="btn btn-sm btn-info"><i class="fa fa-pen-to-square"></i></a>
-                                <a href="/nhacungcap/delete/@item.MaKh" class="btn btn-sm btn-danger btnDelete"><i class="fa fa-trash-can"></i></a>
+                                <a href="/khachhang/edit/@item.MaKh" class="btn btn-sm btn-info"><i class="fa fa-pen-to-square"></i></a>
                             </td>
                         </tr>
                     }

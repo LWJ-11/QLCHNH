@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ThePerfumeShop.Models.DataView.XoaCuaHang>
+
+@{
+    ViewData["Title"] = "Xóa nhà cửa hàng";
+}
+<div class="card">
+    <div class="card-header"><strong>Bạn có muốn xóa cửa hàng này?</strong></div>
+    <div class="card-body card-block">
+        <form action="/cuahang/delete/@Model.FirstOrDefault().MaCh" method="post" asp-antiforgery="true">
+            <input type="hidden" name="MaCh" class="form-control" value="@Model.FirstOrDefault().MaCh">
+            <div class="form-group">
+                <label for="TenCh" class=" form-control-label"><b>Tên cửa hàng:</b> <span>@Model.FirstOrDefault().TenCh</span></label>
+                <input type="hidden" name="TenCh" class="form-control" value="@Model.FirstOrDefault().TenCh">
+            </div>
+            <div class="form-group">
+                <label for="Sdt" class=" form-control-label"><b>Số điện thoại:</b> <span>@Model.FirstOrDefault().Sdt</span></label>
+                <input type="hidden" name="Sdt" class="form-control" value="@Model.FirstOrDefault().Sdt">
+            </div>
+            <div class="form-group">
+                <label for="Diachi" class=" form-control-label"><b>Địa chỉ:</b> <span>@Model.FirstOrDefault().Diachi</span></label>
+                <input type="hidden" name="Diachi" class="form-control" value="@Model.FirstOrDefault().Diachi">
+                <br/>
+                <span asp-validation-for="@Model.FirstOrDefault().Diachi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <a href="/cuahang" class="btn btn-outline-primary mt-4"><i class="fa fa-arrow-left"></i> &nbsp; Trở về</a>
+                <input type="submit" name="submit" class="btn btn-danger mt-4" value="Xóa" />
+            </div>
+        </form>
+    </div>
+</div>

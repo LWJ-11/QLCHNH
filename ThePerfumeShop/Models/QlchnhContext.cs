@@ -53,6 +53,14 @@ public partial class QlchnhContext : DbContext
     public DbSet<DanhSachNhanVien> DanhSachNhanVien { get; set; }
     public DbSet<ThemNhanVien> ThemNhanVien { get; set; }
     public DbSet<ThemSanPham> ThemSanPham { get; set; }
+    public DbSet<DanhSachQuanLyChuaDuocPhanCong> DanhSachQuanLyChuaDuocPhanCong { get; set; }
+    public DbSet<ThemCuaHang> ThemCuaHang { get; set; }
+    public DbSet<CapNhatCuaHang> CapNhatCuaHang { get; set; }
+    public DbSet<DanhSachCuaHang> DanhSachCuaHang { get; set; }
+    public DbSet<XoaCuaHang> XoaCuaHang { get; set; }
+    public DbSet<ThemKho> ThemKho { get; set; }
+    public DbSet<SuaKho> SuaKho { get; set; }
+    public DbSet<DanhSachTonKho> DanhSachTonKho { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -61,6 +69,83 @@ public partial class QlchnhContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         //DataView
+        modelBuilder.Entity<DanhSachTonKho>(
+         eb =>
+         {
+             eb.HasNoKey();
+             eb.ToView("View_DanhSachTonKho");
+             eb.Property(v => v.MaSp).HasColumnName("ma_SP");
+             eb.Property(v => v.TenSp).HasColumnName("ten_SP");
+             eb.Property(v => v.Soluongtonkho).HasColumnName("soluongtonkho");
+         });
+        modelBuilder.Entity<SuaKho>(
+          eb =>
+          {
+              eb.HasNoKey();
+              eb.ToView("View_SuaKho");
+              eb.Property(v => v.MaKho).HasColumnName("ma_Kho");
+              eb.Property(v => v.Diachi).HasColumnName("diachi");
+              eb.Property(v => v.MaCh).HasColumnName("ma_CH");
+          });
+        modelBuilder.Entity<ThemKho>(
+          eb =>
+          {
+              eb.HasNoKey();
+              eb.ToView("View_ThemKho");
+              eb.Property(v => v.Diachi).HasColumnName("diachi");
+              eb.Property(v => v.MaCh).HasColumnName("ma_CH");
+          });
+        modelBuilder.Entity<XoaCuaHang>(
+          eb =>
+          {
+              eb.HasNoKey();
+              eb.ToView("View_XoaCuaHang");
+              eb.Property(v => v.MaCh).HasColumnName("ma_CH");
+              eb.Property(v => v.TenCh).HasColumnName("ten_CH");
+              eb.Property(v => v.Sdt).HasColumnName("sdt");
+              eb.Property(v => v.Diachi).HasColumnName("diachi");
+          });
+        modelBuilder.Entity<DanhSachCuaHang>(
+          eb =>
+          {
+              eb.HasNoKey();
+              eb.ToView("View_DanhSachCuaHang");
+              eb.Property(v => v.MaCh).HasColumnName("ma_CH");
+              eb.Property(v => v.TenCh).HasColumnName("ten_CH");
+              eb.Property(v => v.Sdt).HasColumnName("sdt");
+              eb.Property(v => v.Diachi).HasColumnName("diachi");
+              eb.Property(v => v.SdtQL).HasColumnName("sdt_ql");
+          });
+        modelBuilder.Entity<CapNhatCuaHang>(
+          eb =>
+          {
+              eb.HasNoKey();
+              eb.ToView("View_CapNhatCuaHang");
+              eb.Property(v => v.MaCh).HasColumnName("ma_CH");
+              eb.Property(v => v.TenCh).HasColumnName("ten_CH");
+              eb.Property(v => v.Sdt).HasColumnName("sdt");
+              eb.Property(v => v.Diachi).HasColumnName("diachi");
+              eb.Property(v => v.MaQl).HasColumnName("ma_QL");
+          });
+        modelBuilder.Entity<ThemCuaHang>(
+           eb =>
+           {
+               eb.HasNoKey();
+               eb.ToView("View_ThemCuaHang");
+               eb.Property(v => v.TenCh).HasColumnName("ten_CH");
+               eb.Property(v => v.Sdt).HasColumnName("sdt");
+               eb.Property(v => v.Diachi).HasColumnName("diachi");
+               eb.Property(v => v.MaQl).HasColumnName("ma_QL");
+           });
+        modelBuilder.Entity<DanhSachQuanLyChuaDuocPhanCong>(
+           eb =>
+           {
+               eb.HasNoKey();
+               eb.ToView("View_DanhSachQuanLyChuaDuocPhanCong");
+               eb.Property(v => v.MaQl).HasColumnName("ma_QL");
+               eb.Property(v => v.TenQl).HasColumnName("ten_QL");
+               eb.Property(v => v.Sdt).HasColumnName("sdt");
+           });
         modelBuilder.Entity<ThemSanPham>(
            eb =>
            {

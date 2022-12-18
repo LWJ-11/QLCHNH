@@ -1,0 +1,46 @@
+﻿@model List<ThePerfumeShop.Models.DataView.DanhSachTonKho>
+
+@{
+    ViewData["Title"] = "Tồn kho";
+}
+<div class="card">
+    <div class="card-header">
+        <strong class="card-title">Tồn kho</strong>
+        <a type="button" href="/tonkho/Create/@Model.FirstOrDefault().MaSp" class="card-title btn btn-info float-right">Thêm sản phẩm</a>
+    </div>
+    <div class="card-body">
+        @if (Model != null)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng sản phẩm</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.MaSp</td>
+                            <td>@item.TenSp</td>
+                            <td>@item.Soluongtonkho</td>
+                            <td>
+                                <a href="/tonkho/edit/@item.MaSp" class="btn btn-sm btn-info"><i class="fa fa-pen-to-square"></i></a>
+                                <a href="/tonkho/delete/@item.MaSp" class="btn btn-sm btn-danger btnDelete"><i class="fa fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h4>Chưa có thông tin nhân viên nào </h4>
+        }
+    </div>
+</div>
+
+

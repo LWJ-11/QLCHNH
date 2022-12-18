@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ThePerfumeShop.Models.DataView.SuaKho>
+@{
+    ViewData["Title"] = "Cập nhật thông tin kho";
+}
+
+<div class="card">
+    <div class="card-header"><strong>Cập nhât thông tin kho</strong></div>
+    <div class="card-body card-block">
+        <form action="/kho/edit" method="post" asp-antiforgery="true">
+            <input type="hidden" name="MaKho" class="form-control" value="@Model.FirstOrDefault().MaKho">
+            <div class="form-group">
+                <label for="Diachi" class=" form-control-label">Địa chỉ kho</label>
+                <input type="text" name="Diachi" class="form-control" value="@Model.FirstOrDefault().Diachi">
+                <span asp-validation-for="@Model.FirstOrDefault().Diachi" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <select asp-for="@Model.FirstOrDefault().MaCh" class="form-control"
+                                asp-items="@ViewBag.CuaHang">
+                            <option>--Tên cửa hàng--</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <a href="/kho" class="btn btn-outline-primary mt-4"><i class="fa fa-arrow-left"></i> &nbsp; Trở về</a>
+                <input type="submit" name="submit" class="btn btn-info mt-4" value="Cập nhật" />
+            </div>
+        </form>
+    </div>
+</div>

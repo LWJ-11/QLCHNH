@@ -50,11 +50,33 @@ begin
 end
 ----Lê Quang Duy
 ---01/12/2022
+--thêm cửa hàng
+create proc sp_themcuahang
+@tenCH nvarchar(50),
+@sdt int,
+@diachi nvarchar(50),
+@maQl int
+as
+begin
+	insert into CuaHang(ten_CH,sdt,diachi,ma_QL)
+	values (@tenCH,@sdt,@diachi,@maQl)
+end
+----Lê Quang Duy
+---01/12/2022
 --thêm brand 
 create proc sp_thembrand
 @tenBr nvarchar(50)
 as begin
 	insert into Brand(ten_Br) values (@tenBr)
+end
+----Lê Quang Duy
+---01/12/2022
+--thêm kho 
+create proc sp_themkho
+@diaChi nvarchar(100),
+@maCH int
+as begin
+	insert into Kho(diachi, ma_CH) values (@diaChi, @maCH)
 end
 ----Lê Quang Duy
 ---01/12/2022

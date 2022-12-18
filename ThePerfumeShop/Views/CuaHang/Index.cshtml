@@ -1,4 +1,4 @@
-﻿@model List<ThePerfumeShop.Models.CuaHang>
+﻿@model List<ThePerfumeShop.Models.DataView.DanhSachCuaHang>
 
 @{
     ViewData["Title"] = "Danh sách cửa hàng";
@@ -6,7 +6,7 @@
 <div class="card">
     <div class="card-header">
         <strong class="card-title">Danh sách cửa hàng</strong>
-        <a type="button" href="/CuaHang/Create" class="card-title btn btn-info float-right">Thêm cửa hàng</a>
+        <a type="button" href="/cuaHang/create" class="card-title btn btn-info float-right">Thêm cửa hàng</a>
     </div>
     <div class="card-body">
         @if (Model != null)
@@ -18,6 +18,7 @@
                         <th>Tên cửa hàng</th>
                         <th>Số điện thoại</th>
                         <th>Địa chỉ</th>
+                        <th>Quản lý phụ trách</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -29,6 +30,7 @@
                             <td>@item.TenCh</td>
                             <td>@item.Sdt</td>
                             <td>@item.Diachi</td>
+                            <td>@item.SdtQL</td>
                             <td>
                                 <a href="/cuahang/danhsachnhanvien/@item.MaCh" class="btn btn-sm btn-info"><i class="fa fa-users"></i></a>
                                 <a href="/cuahang/edit/@item.MaCh" class="btn btn-sm btn-info"><i class="fa fa-pen-to-square"></i></a>

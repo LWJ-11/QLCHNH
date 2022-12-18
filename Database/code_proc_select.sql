@@ -21,6 +21,16 @@ end
 ----- Phạm Huỳnh Duy Kha
 ----01/12/2022
 --- Lấy danh sách khách hàng
+create proc sp_khachhangbyId @maKh int
+as
+begin
+	select * from KhachHang
+	where ma_KH = @maKh
+end
+
+----- Lê Quang Duy
+----01/12/2022
+--- Lấy danh sách khách hàng bằng Id
 create proc sp_danhsachkhachhang
 as
 begin
@@ -29,10 +39,11 @@ end
 ------ Lê Quang Duy
 ----- 01/12/2022
 --Lấy danh sách cửa hàng
-create proc sp_danhsachcuahang
+alter proc sp_danhsachcuahang
 as
 begin
-	select *  from CuaHang
+	select ch.ma_CH, ch.ten_CH, ch.sdt, ch.diachi, ql.sdt as sdt_ql  from CuaHang ch, QuanLy ql
+	where ch.ma_QL = ql.ma_QL
 end
 ------ Lê Quang Duy
 ----- 01/12/2022
@@ -54,6 +65,28 @@ begin
 	select k.ma_Kho, k.diachi, ch.ten_CH from Kho k, CuaHang ch
 	where k.ma_CH = ch.ma_CH
 end
+------ Lê Quang Duy
+----- 01/12/2022
+--Tìm kho băng Id
+create proc sp_khobangId
+@maKh int
+as
+begin
+	select *  from Kho 
+	where ma_Kho = @maKh
+end
+----- Lê Quang Duy
+----01/12/2022
+--- Lấy danh sách tồn kho
+create proc sp_danhsachtonkho
+@maKh int
+as
+begin
+	select sp.ma_SP ,sp.ten_SP, tk.soluongtonkho  from TonKho tk, SanPham sp
+	where ma_Kho = @maKh
+	and tk.ma_SP = sp.ma_SP
+end
+
 ----- Phạm Huỳnh Duy Kha
 ----01/12/2022
 --- Lấy danh sách nhà cung cấp
@@ -144,3 +177,32 @@ as begin
 	select * from Brand
 end
 
+----- Lê Quang Duy
+----01/12/2022
+-- lấy danh sách quản lý chưa được phân công
+create proc sp_danhsachquanlyphancongcuahang
+as
+begin
+	select ma_QL, ten_QL, sdt from QuanLy Except
+	select ql.ma_QL, ql.ten_QL, ql.sdt from QuanLy ql, CuaHang ch
+	where ql.ma_QL = ch.ma_QL
+end
+
+----- Lê Quang Duy
+----01/12/2022
+-- lấy danh sách quản lý hiện tại và quản lý chưa được phân công
+create proc sp_danhsachquanlyhientaiphancongcuahang @maCH int
+as
+begin
+	declare @maQl int
+	set @maQl = (select ql.ma_QL from QuanLy ql, CuaHang ch
+						where ql.ma_QL = ch.ma_QL
+						and ma_CH = @maCH)
+	
+	select ma_QL, ten_QL, sdt from QuanLy Except
+	select ql.ma_QL, ql.ten_QL, ql.sdt from QuanLy ql, CuaHang ch
+	where ql.ma_QL = ch.ma_QL	
+	and ql.ma_QL != @maQl
+end
+
+exec sp_danhsachquanlyhientaiphancongcuahang 1

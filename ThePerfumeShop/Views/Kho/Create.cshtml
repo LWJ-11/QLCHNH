@@ -1,23 +1,31 @@
-﻿@model List<ThePerfumeShop.Models.DataView.DanhSachKho>
-
+﻿@model ThePerfumeShop.Models.DataView.ThemKho
 @{
-    ViewData["Title"] = "Danh sách kho";
+    ViewData["Title"] = "Thêm kho";
 }
 
 <div class="card">
     <div class="card-header"><strong>Thêm kho</strong></div>
     <div class="card-body card-block">
-        <div class="form-group"><label for="company" class=" form-control-label">Company</label><input type="text" id="company" placeholder="Enter your company name" class="form-control"></div>
-        <div class="form-group"><label for="vat" class=" form-control-label">VAT</label><input type="text" id="vat" placeholder="DE1234567890" class="form-control"></div>
-        <div class="form-group"><label for="street" class=" form-control-label">Street</label><input type="text" id="street" placeholder="Enter street name" class="form-control"></div>
-        <div class="row form-group">
-            <div class="col-8">
-                <div class="form-group"><label for="city" class=" form-control-label">City</label><input type="text" id="city" placeholder="Enter your city" class="form-control"></div>
+        <form action="/kho/create" method="post" asp-antiforgery="true">
+            <div class="form-group">
+                <label for="Diachi" class=" form-control-label">Địa chỉ kho</label>
+                <input type="text" name="Diachi" class="form-control">
+                <span asp-validation-for="Diachi" class="text-danger"></span>
             </div>
-            <div class="col-8">
-                <div class="form-group"><label for="postal-code" class=" form-control-label">Postal Code</label><input type="text" id="postal-code" placeholder="Postal Code" class="form-control"></div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <select asp-for="MaCh" class="form-control"
+                                asp-items="@ViewBag.CuaHang">
+                            <option>--Tên cửa hàng--</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group"><label for="country" class=" form-control-label">Country</label><input type="text" id="country" placeholder="Country name" class="form-control"></div>
+            <div class="form-group">
+                <a href="/kho" class="btn btn-outline-primary mt-4"><i class="fa fa-arrow-left"></i> &nbsp; Trở về</a>
+                <input type="submit" name="submit" class="btn btn-info mt-4" value="Thêm" />
+            </div>
+        </form>
     </div>
 </div>

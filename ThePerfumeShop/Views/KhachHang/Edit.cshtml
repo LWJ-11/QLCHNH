@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ThePerfumeShop.Models.KhachHang>
+@{
+    ViewData["Title"] = "Cập nhật thông tin nhà khách hàng";
+}
+
+<div class="card">
+    <div class="card-header"><strong>Cập nhật thông tin khách hàng</strong></div>
+    <div class="card-body card-block">
+        <form action="/khachhang/edit/@Model.FirstOrDefault().MaKh" method="post" asp-antiforgery="true">
+            <input type="hidden" name="MaKh" class="form-control" value="@Model.FirstOrDefault().MaKh">
+            <div class="form-group">
+                <label for="TenKh" class=" form-control-label">Tên khách hàng</label>
+                <input type="text" name="TenKh" class="form-control" value="@Model.FirstOrDefault().TenKh">
+                <span asp-validation-for="@Model.FirstOrDefault().TenKh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Gioitinh" class=" form-control-label">Giới tính</label>
+                <select class="form-control" name="Gioitinh">
+                    <option value="Nam">Nam</option>
+                    <option value="Nu">Nữ</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Ngaysinh" class=" form-control-label">Ngày sinh</label>
+                <input type="date" name="Ngaysinh" class="form-control" value="@Model.FirstOrDefault().Ngaysinh" />
+                <span asp-validation-for="@Model.FirstOrDefault().Ngaysinh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Sdt" class=" form-control-label">Số điện thoại</label>
+                <input type="tel" name="Sdt" class="form-control" value="@Model.FirstOrDefault().Sdt">
+                <span asp-validation-for="@Model.FirstOrDefault().Sdt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Diachi" class=" form-control-label">Địa chỉ</label>
+                <input type="text" name="Diachi" class="form-control" value="@Model.FirstOrDefault().Diachi">
+            </div>
+            <div class="form-group">
+                <a href="/khachhang" class="btn btn-outline-primary mt-4"><i class="fa fa-arrow-left"></i> &nbsp; Trở về</a>
+                <input type="submit" name="submit" class="btn btn-info mt-4" value="Cập nhật" />
+            </div>
+        </form>
+    </div>
+</div>

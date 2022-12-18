@@ -78,7 +78,6 @@ begin
 	update Kho
 	set diachi=@diachi, ma_CH=@maCH
 	where ma_Kho=@makho
-	and @maCH=(select ma_CH from CuaHang)
 end
 -----Lê Quang Duy
 --02/12/2022
@@ -107,4 +106,20 @@ as begin
 	update Brand
 	set ten_Br=@tenbr
 	where ma_Br=@mabr
+end
+
+-----Lê Quang Duy
+--02/12/2022
+--sửa thông tin cửa hàng
+create proc sp_suacuahang
+@maCH int,
+@tenCH nvarchar(50),
+@sdt int,
+@diaChi nvarchar(100),
+@maQL int
+as 
+begin
+	update CuaHang
+	set ten_CH= @tenCH, sdt = @sdt, diachi = @diaChi, ma_QL = @maQL
+	where ma_CH=@maCH
 end
