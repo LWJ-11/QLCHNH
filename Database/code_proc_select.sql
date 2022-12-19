@@ -78,7 +78,7 @@ end
 ----- Lê Quang Duy
 ----01/12/2022
 --- Lấy danh sách tồn kho
-create proc sp_danhsachtonkho
+alter proc sp_danhsachtonkho
 @maKh int
 as
 begin

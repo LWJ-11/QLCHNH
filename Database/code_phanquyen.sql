@@ -99,3 +99,5 @@ as begin
 	insert into QuanLy(ten_QL,ngaysinh,gioitinh,sdt,diachi,id)
 	values (@tenNV,@ngaysinh,@gioitinh,@sdt,@diachi,@id)
 end
+
+exec sp_themquanly 'QuanLy1','123456','Quan Ly', '9-03-2001', 'nam', 0987654321, 'TP HCM'

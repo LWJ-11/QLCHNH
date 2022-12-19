@@ -72,7 +72,7 @@ end
 ----Lê Quang Duy
 ---01/12/2022
 --thêm kho 
-create proc sp_themkho
+alter proc sp_themkho
 @diaChi nvarchar(100),
 @maCH int
 as begin

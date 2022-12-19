@@ -69,7 +69,7 @@ end
 -----Phạm Huỳnh DUy Kha
 --02/12/2022
 ---sửa kho
-create proc sp_suakho
+alter proc sp_suakho
 @makho int,
 @diachi nvarchar(50),
 @maCH int
